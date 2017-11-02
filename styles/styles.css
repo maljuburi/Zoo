@@ -6,16 +6,30 @@
 
 body {
   background: radial-gradient(#d0ff00, #2c4900);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   color: white;
+  position: relative;
 }
 
 header {
   background: #2c4900;
 }
 
-.add-form {
-  background: rgba(0, 0, 0, 0.5);
+.center {
+  text-align: center;
+}
+
+#err {
+  color: red;
+}
+
+#msg {
+  color: black;
+}
+
+.add-form,
+.view-form {
+  background: rgba(0, 0, 0, 0.7);
   padding: 1.5em;
   border-radius: 0.5em;
   width: 70%;
@@ -31,6 +45,7 @@ select {
   padding: 0.5em;
   outline: none;
   border-radius: 0.5em;
+  background: white;
 }
 
 input[type=radio] {
@@ -59,12 +74,13 @@ input[type=submit]:hover {
 
 .nav {
   text-align: center;
-  width: 70%;
+  width: 100%;
 }
 
 .logo {
-  width: 30%;
-  float: left;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
   padding: 0 1em;
   color: #f6ff00;
 }
@@ -84,4 +100,60 @@ input[type=submit]:hover {
 .btn:hover {
   color: #7c5609;
   background: #f6ff00;
+}
+
+.welcome{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  border-radius: 0.5em;
+  width: 70%;
+  margin: 2em auto;
+  box-shadow: 0 0 1em black;
+
+}
+
+.welcome h1 {
+  font-size: 4em;
+  text-align: center;
+}
+.tiger{
+  z-index: -10;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  margin-left: -560px;
+
+}
+.tigers{
+  width: 70%;
+  margin: 0 auto;
+}
+.tigers img {
+  width: 100%;
+  height: auto;
+}
+
+
+#tblList {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #2c4900;
+  box-shadow: 0 0 1em black;
+}
+
+tr:nth-child(even) {
+  background: #703008;
+}
+
+tr:nth-child(odd) {
+  background: #7c4109;
+}
+
+th {
+  background: #2c4900;
+  padding: 1em;
+}
+
+td {
+  padding: 0.5em;
 }

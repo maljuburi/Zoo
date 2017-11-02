@@ -19,18 +19,13 @@ if(isset($_GET["submitadd"])){
     $gender = $_GET["gender"];
 
     if($conn){
-        $sql = "INSERT INTO zoo (name, dob, type, gender) VALUES ($name, $dob, $type, $gender)";
-        echo $sql;
+        $sql = "INSERT INTO zoo (name, dob, type, gender) VALUES ('$name', '$dob', '$type', '$gender')";
         
-        if(mysqli_query($conn, $sql)){
-            echo "success";
-        }
 
-        if(mysqli_query($conn, $sql)){
+        if(mysqli_query($conn,$sql)){
             
             $msg = "Animal ".$name." type of ".$type." is Added!";
         }else{
-            
             $msg = "Error: Animal was not added";
         }
     
@@ -44,7 +39,7 @@ if(isset($_GET["submitadd"])){
 
 <section>
     <div class="container">
-        <form class="add-form">
+        <form class="add-form" action="view.php">
                 <p>Name:</p>
                 <input type="text" name="name" placeholder="Name of Animal" required><br><br>
                 <p> Date of Birth:</p>
@@ -74,7 +69,7 @@ if(isset($_GET["submitadd"])){
 
 <section>
     <div class="container">
-        <div id="err" class="center">
+        <div id="err" class="red center">
             <?php echo $err; ?>
         </div>
         <div id="msg" class="center bold">
@@ -82,6 +77,12 @@ if(isset($_GET["submitadd"])){
         </div>
     </div>
 </section>
+
+
+
+<div class="tiger">
+    <img src="img/tiger2.webp" alt="tigers image">
+</div>
 
 
 <?php include "php/close.php"; ?>

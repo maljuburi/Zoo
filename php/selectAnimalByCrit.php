@@ -1,11 +1,20 @@
-<?php
-
+<?php 
 include "conn.php";
 include_once "animClass.php";
 
 if ($conn) {
-   
-    $sql = "SELECT * from zoo";
+    //if connection is good
+    $where = "";
+
+    if($criteria == "name"){
+        $where = "where name = '$value'";
+    }elseif ($criteria == "type") {
+        $where = "where type = '$value'";
+    }elseif ($criteria == "gender") {
+        $where = "where gender = '$value'";
+    }
+
+    $sql = "SELECT * from zoo ".$where;
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         $animals=[];
@@ -19,6 +28,8 @@ if ($conn) {
 
 
 
-include "close.php";
+
+
+include "close.php"
 
 ?>

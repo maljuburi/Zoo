@@ -2,7 +2,7 @@
 
 $conn=null;
 
-$env="localhost"; //"hvcc" or "local", environment.
+$env="local"; //"hvcc" or "local", environment.
 
 $db_uname=$db_pw=$db_server=$db_dbname="";
 
@@ -24,7 +24,7 @@ if ($env=="hvcc"){
     //For local Development
     $db_uname="root";
     //Your Local Development User Name
-    $db_pw="";
+    $db_pw="admin";
     //Your Local Password
     $db_server="localhost";
     $db_dbname="maljuburi";
