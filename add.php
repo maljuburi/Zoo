@@ -1,39 +1,9 @@
-<?php
-$msg = "";
-$err = "";
-?>
+
 
 
 <?php include "header.php"; ?>
 
 
-
-<?php include "php/conn.php";?>
-
-<?php
-
-if(isset($_GET["submitadd"])){
-    $name = $_GET["name"];
-    $dob = $_GET["dob"];
-    $type = $_GET["type"];
-    $gender = $_GET["gender"];
-
-    if($conn){
-        $sql = "INSERT INTO zoo (name, dob, type, gender) VALUES ('$name', '$dob', '$type', '$gender')";
-        
-
-        if(mysqli_query($conn,$sql)){
-            
-            $msg = "Animal ".$name." type of ".$type." is Added!";
-        }else{
-            $msg = "Error: Animal was not added";
-        }
-    
-    }
-}
-
-
-?>
 
 
 
@@ -64,26 +34,17 @@ if(isset($_GET["submitadd"])){
                 <input type="submit" name="submitadd" value="Add">
             </p>
         </form>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div id="err" class="red center">
-            <?php echo $err; ?>
-        </div>
-        <div id="msg" class="center bold">
-            <?php echo $msg; ?>
+        
+        <div class="tiger">
+            <img src="img/tiger2.webp" alt="tigers image">
         </div>
     </div>
 </section>
 
 
 
-<div class="tiger">
-    <img src="img/tiger2.webp" alt="tigers image">
-</div>
 
 
-<?php include "php/close.php"; ?>
+
+
 <?php include "footer.php"; ?>

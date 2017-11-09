@@ -24,7 +24,7 @@ if ($env=="hvcc"){
     //For local Development
     $db_uname="root";
     //Your Local Development User Name
-    $db_pw="admin";
+    $db_pw="";
     //Your Local Password
     $db_server="localhost";
     $db_dbname="maljuburi";

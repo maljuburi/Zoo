@@ -1,21 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-var browserHeight = $(window).height();
-var pageHeight = $(document).height();
+  var browserHeight = $(window).height();
+  var pageHeight = $(document).height();
 
-if(pageHeight == browserHeight){
-  $("html").css("height","100%");
-}else{
-  $("html").css("height","auto");
-  $("footer").css('position','static');
-}
-
-
-
-
-
-
-
+  if (pageHeight == browserHeight) {
+    $("html").css("height", "100%");
+  } else {
+    $("html").css("height", "auto");
+    $("footer").css('position', 'static');
+  }
 
 
 });

@@ -16,8 +16,8 @@ if ($conn) {
 
     $sql = "SELECT * from zoo ".$where;
     $result = mysqli_query($conn, $sql);
+    $animals=[];
     if (mysqli_num_rows($result) > 0) {
-        $animals=[];
         while($row = mysqli_fetch_assoc($result)) {
             array_push($animals, new Animals($row["anid"],$row["name"], $row["dob"], $row["type"], $row["gender"]));
         }
